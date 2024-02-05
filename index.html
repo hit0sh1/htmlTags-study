@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMLタグ</title>
+    <style>
+      mark {
+        background: linear-gradient(transparent 80%, rgb(0, 255, 13) 0%);
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>フォーム</legend>
+
+      <label for="htmlTags">好きなHTMLタグを選択してください</label>
+      <br />
+      <input list="tags" />
+      <datalist id="tags">
+        <option value="h1"></option>
+        <option value="p"></option>
+        <option value="div"></option>
+        <option value="label"></option>
+      </datalist>
+
+      <br />
+      <progress value="0.8" max="2" id="pg"></progress>
+
+      <input type="color" />
+
+      <p>
+        あなたは
+        <abbr title="HyperText MarkUp Language">HTML</abbr>
+        をご存知でしょうか。
+      </p>
+
+      <del>明日会いましょう</del>
+      <ins>明後日会いましょう</ins>
+
+      <br />
+      <mark>mark要素はテキストを目立たせる時に使います</mark>
+
+      <marquee behavior="scroll" direction="left" scrollamount="6">テキスト</marquee>
+
+      <p>H<sub>2</sub>0</p>
+      <p>X<sup>2</sup></p>
+    </fieldset>
+
+    <script>
+      pg = document.getElementById("pg");
+      pg.value = 0.4;
+    </script>
+  </body>
+</html>
